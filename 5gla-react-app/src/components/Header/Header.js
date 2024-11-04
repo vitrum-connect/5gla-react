@@ -1,16 +1,31 @@
-import {AppBar, Toolbar, Typography, Button, Container, Box, IconButton, Menu, MenuItem } from '@mui/material'
+import {
+  AppBar,
+  Typography,
+  Container,
+} from "@mui/material";
+import { blueGrey } from "@mui/material/colors";
 
-export default function Header(){
-    return(
-        <header>
-            <AppBar position='static'>
-                <Container maxWidth="xl"/>
-
-                <Typography variant='h1'component='div' sx={{flexGrow: 1}}>
-                    5GLA-VISUALIZATION - REACT - Placeholder
-                </Typography>
-            </AppBar>
-        </header>
-    );
+export default function Header() {
+  return (
+    <header>
+      <AppBar
+        position="static"
+        sx={{
+          bgcolor: blueGrey[900],
+        }}
+      >
+        <Container maxWidth="xl" />
+        <Typography
+          variant="h1"
+          noWrap
+          component="div"
+          href="/"
+          align="center"
+          sx={{ flexGrow: 1 }}
+        >
+          AquaBrain
+        </Typography>
+      </AppBar>
+    </header>
+  );
 }
-

@@ -15,9 +15,7 @@ const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <HomePage></HomePage> },
-      { path: '/impressum', element: <ImpressumPage></ImpressumPage>}
-             
-
+      { path: "/impressum", element: <ImpressumPage></ImpressumPage> },
     ],
   },
 ]);
