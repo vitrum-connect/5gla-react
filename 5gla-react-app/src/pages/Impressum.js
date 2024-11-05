@@ -4,7 +4,7 @@ function ImpressumPage() {
 
   return (
     <>
-      <Box display="flex" justifyContent="center" alignItems="flex-start">
+      <Box>
         <Container maxWidth="xl" sx={{ textAlign: "left" }}>
           <Typography variant="h3">Impressum</Typography>
           <Typography variant="body2">
