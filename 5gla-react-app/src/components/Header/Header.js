@@ -1,4 +1,4 @@
-import { AppBar, Typography, Toolbar, MenuItem } from "@mui/material";
+import { AppBar, Typography, Toolbar, MenuItem, Button } from "@mui/material";
 import { blueGrey, grey } from "@mui/material/colors";
 import { Link } from "react-router-dom";
 
@@ -31,7 +31,14 @@ export default function Header() {
         >
           {pages.map((page) => (
             <MenuItem key={page}>
-              <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+              <Button
+                key={page}
+                component={Link}
+                to={`/${page.toLowerCase()}`}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                {page}
+              </Button>
             </MenuItem>
           ))}
         </Toolbar>
