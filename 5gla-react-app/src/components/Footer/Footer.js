@@ -14,7 +14,7 @@ export default function Footer() {
     >
       <Link
         to="/impressum"
-        style={{
+        sx={{
           padding: "10px",
           color: "#FFFFFF",
         }}
