@@ -1,6 +1,8 @@
-import { BottomNavigation } from "@mui/material";
+import { BottomNavigation, MenuItem, Button, Toolbar } from "@mui/material";
 import { Link } from "react-router-dom";
 import { blueGrey } from "@mui/material/colors";
+
+const pages = ["Impressum"];
 
 export default function Footer() {
   return (
@@ -12,15 +14,20 @@ export default function Footer() {
         bottom: 0,
       }}
     >
-      <Link
-        to="/impressum"
-        sx={{
-          padding: "10px",
-          color: "#FFFFFF",
-        }}
-      >
-        Impressum
-      </Link>
+      <Toolbar>
+        {pages.map((page) => (
+          <MenuItem key={page}>
+            <Button
+              key={page}
+              component={Link}
+              to={`/${page.toLowerCase()}`}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              {page}
+            </Button>
+          </MenuItem>
+        ))}
+      </Toolbar>
     </BottomNavigation>
   );
 }
