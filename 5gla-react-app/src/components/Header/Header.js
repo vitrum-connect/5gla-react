@@ -1,7 +1,9 @@
-import { AppBar, Typography, Toolbar } from "@mui/material";
+import { AppBar, Typography, Toolbar, MenuItem } from "@mui/material";
 import { blueGrey, grey } from "@mui/material/colors";
 import { Link } from "react-router-dom";
-//<Container maxWidth="xl" />
+
+const pages = ["Home", "Impressum"];
+
 export default function Header() {
   return (
     <header>
@@ -27,15 +29,11 @@ export default function Header() {
             bgcolor: grey[600],
           }}
         >
-          <Link
-            to="/"
-            sx={{
-              padding: "10px",
-              color: "#FFFFFF",
-            }}
-          >
-            Startseite
-          </Link>
+          {pages.map((page) => (
+            <MenuItem key={page}>
+              <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+            </MenuItem>
+          ))}
         </Toolbar>
       </AppBar>
     </header>
