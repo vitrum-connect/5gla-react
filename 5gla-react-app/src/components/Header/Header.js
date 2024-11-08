@@ -1,10 +1,7 @@
-import {
-  AppBar,
-  Typography,
-  Container,
-} from "@mui/material";
-import { blueGrey } from "@mui/material/colors";
-
+import { AppBar, Typography, Toolbar } from "@mui/material";
+import { blueGrey, grey } from "@mui/material/colors";
+import { Link } from "react-router-dom";
+//<Container maxWidth="xl" />
 export default function Header() {
   return (
     <header>
@@ -14,9 +11,8 @@ export default function Header() {
           bgcolor: blueGrey[900],
         }}
       >
-        <Container maxWidth="xl" />
         <Typography
-          variant="h1"
+          variant="h2"
           noWrap
           component="div"
           href="/"
@@ -25,6 +21,22 @@ export default function Header() {
         >
           AquaBrain
         </Typography>
+
+        <Toolbar
+          sx={{
+            bgcolor: grey[600],
+          }}
+        >
+          <Link
+            to="/"
+            sx={{
+              padding: "10px",
+              color: "#FFFFFF",
+            }}
+          >
+            Startseite
+          </Link>
+        </Toolbar>
       </AppBar>
     </header>
   );

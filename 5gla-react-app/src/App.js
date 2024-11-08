@@ -1,18 +1,21 @@
 import React from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import HomePage from "./pages/Home.js";
-import ImpressumPage from "./pages/Impressum.js";
+import HomePage from "./Pages/Home.js";
+import ImpressumPage from "./Pages/Impressum.js";
 import "./App.css";
-import Header from "./components/Header/Header.js";
-import Footer from "./components/Footer/Footer.js";
+import Header from "./Components/Header/Header.js";
+import Footer from "./Components/Footer/Footer.js";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <>
-        <Header></Header>
-        <Footer></Footer>
+        <div>
+          <Header></Header>
+          <Outlet></Outlet>
+          <Footer></Footer>
+        </div>
       </>
     ),
     children: [

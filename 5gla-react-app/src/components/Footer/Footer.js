@@ -1,4 +1,5 @@
-import { BottomNavigation, Typography, Container } from "@mui/material";
+import { BottomNavigation } from "@mui/material";
+import { Link } from "react-router-dom";
 import { blueGrey } from "@mui/material/colors";
 
 export default function Footer() {
@@ -11,17 +12,15 @@ export default function Footer() {
         bottom: 0,
       }}
     >
-      <Typography
-        variant="h5"
-        noWrap
-        color=""
-        component="div"
-        href="/"
-        align="center"
-        sx={{ flexGrow: 1, color:'#FFFFFF' }}
+      <Link
+        to="/impressum"
+        sx={{
+          padding: "10px",
+          color: "#FFFFFF",
+        }}
       >
-        AquaBrain
-      </Typography>
+        Impressum
+      </Link>
     </BottomNavigation>
   );
 }
