@@ -1,5 +1,9 @@
+import MapComponent from "../Components/OpenLayerMap/OpenLayerMap.js";
 function HomePage() {
-  return <>WELCOME TO 5GLA-REACT-VISUALIZATION</>;
+  return(
+    <MapComponent></MapComponent>
+  );
+
 }
 
 export default HomePage;
