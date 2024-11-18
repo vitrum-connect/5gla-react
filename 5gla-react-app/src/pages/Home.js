@@ -1,12 +1,10 @@
 import MapComponent from "../Components/OpenLayerMap/OpenLayerMap.js";
 function HomePage() {
-  return(
+  return (
     <>
-    <MapComponent></MapComponent>
+      <MapComponent></MapComponent>
     </>
-
   );
-
 }
 
 export default HomePage;

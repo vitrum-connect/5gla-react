@@ -1,5 +1,10 @@
 import React from "react";
-import { createBrowserRouter, Outlet, RouterProvider, Navigate } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Outlet,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 import HomePage from "./Pages/Home.js";
 import ImpressumPage from "./Pages/Impressum.js";
 import "./App.css";
@@ -18,7 +23,7 @@ const router = createBrowserRouter([
       </>
     ),
     children: [
-      { index:true, element:<Navigate to="/home" />},
+      { index: true, element: <Navigate to="/home" /> },
       { path: "home", element: <HomePage></HomePage> },
       { path: "/impressum", element: <ImpressumPage></ImpressumPage> },
     ],

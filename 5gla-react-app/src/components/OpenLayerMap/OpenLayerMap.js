@@ -3,9 +3,9 @@ import { Map, View } from "ol";
 import OSM from "ol/source/OSM";
 import ImageLayer from "ol/layer/Image";
 import ImageWMS from "ol/source/ImageWMS";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
 import TileLayer from "ol/layer/Tile";
+import PageContainer from "../Container/PageContainer";
+import config from "../../config.json";
 
 export default function MapComponent() {
   // useEffect -> an empty " [] " --> compo is load during first rendering only
@@ -29,8 +29,8 @@ export default function MapComponent() {
       target: "map",
       layers: layers,
       view: new View({
-        center: [52.90026358079064, 10.43969630922362],
-        zoom: 5,
+        center: [10.43969630922362, 52.90026358079064],
+        zoom: 7,
       }),
     });
 
@@ -39,9 +39,7 @@ export default function MapComponent() {
 
   return (
     <div>
-      <Container>
-        <Box id="map" sx={{ height: "60vh", border: 1 }}></Box>
-      </Container>
+      <PageContainer id="map" height="60vh" />
     </div>
   );
 }

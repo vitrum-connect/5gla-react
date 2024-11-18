@@ -2,7 +2,7 @@ import { AppBar, Typography, Toolbar, MenuItem, Button } from "@mui/material";
 import { blueGrey, grey } from "@mui/material/colors";
 import { Link } from "react-router-dom";
 
-const pages = ["Home", "Impressum"];
+const pages = ["Home"];
 
 export default function Header() {
   return (
